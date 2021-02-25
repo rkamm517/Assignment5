@@ -9,8 +9,21 @@
     <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
-    <div>
-        @RenderBody()
+    <div class="bg-dark text-white p-1">
+        <span class="navbar-brand ml-2"><a class="navbar-brand" asp-action="Index">Reed's Reads</a></span>
     </div>
+    <div class="row m-1 p-1">
+        <div class="col-3">
+            <h1 class="animated fadeIn">Books Available</h1>
+        </div>
+        <div class="col-9">
+            <div class="alert alert-info alert-dismissible">
+                Thank you for visiting Reed's Reads!
+            </div>
+            @RenderBody()
+        </div>
+    </div>
+        
+
 </body>
 </html>

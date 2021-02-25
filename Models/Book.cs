@@ -6,15 +6,18 @@ using System.Threading.Tasks;
 
 namespace Assignment5.Models
 {
+    //Class to create book objects
     public class Book
     {
-        //Title, Author, Publisher, ISBN, Classification/Category, Price
+        //Properties for each book
         [Key]
         public int BookId { get; set; }
         [Required]
         public string Title { get; set; }
         [Required]
-        public string Author { get; set; }
+        public string AuthorFirst { get; set; }
+        [Required]
+        public string AuthorLast { get; set; }
         [Required]
         public string Publisher { get; set; }
         [Required]
@@ -26,6 +29,9 @@ namespace Assignment5.Models
         public string Category { get; set; }
         [Required]
         public double Price { get; set; }
+        [Required]
+        public int Pages { get; set; }
+
 
     }
 }

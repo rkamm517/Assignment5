@@ -3,14 +3,16 @@ using Assignment5.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Assignment5.Migrations
 {
     [DbContext(typeof(ProjectDBContext))]
-    partial class ProjectDBContextModelSnapshot : ModelSnapshot
+    [Migration("20210224234642_addPages")]
+    partial class addPages
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,11 +27,7 @@ namespace Assignment5.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("AuthorFirst")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("AuthorLast")
+                    b.Property<string>("Author")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
